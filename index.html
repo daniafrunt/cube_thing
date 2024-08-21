@@ -1,0 +1,78 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Huh</title>
+	<style>
+		.cube {
+			perspective: 20000px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			transform-style: preserve-3d;
+			top: 50%;
+			left: 50%;
+			transform: rotate3d(1, 1, 0.2, 45deg);
+			animation: 10s linear infinite spiiin;
+		}
+		.face
+		{
+			display: flex;
+			position: absolute;
+			justify-content: center;
+			align-items: center;
+			width: 300px;
+			height: 300px;
+			font-size: 3rem;
+			border: 2px black solid;
+			background: #0055FF22;
+			transform-style: preserve-3d;
+		}
+		.front
+		{
+			transform: translateZ(150px);
+		}
+		.left
+		{
+			transform: translateX(150px) rotate3d(0, 1, 0, 90deg)
+		}
+		.right
+		{
+			transform: translateX(-150px) rotate3d(0, -1, 0, 90deg)
+		}
+		.back
+		{
+			transform: translateZ(-150px) rotate3d(0, 1, 0, 180deg);
+		}
+		.top
+		{
+			transform: translateY(-150px) rotate3d(1, 0, 0, 90deg)
+		}
+		.bottom
+		{
+			transform: translateY(150px) rotate3d(-1, 0, 0, 90deg)
+		}
+		@keyframes spiiin
+		{
+			0%
+			{
+				transform: rotate3d(1, 1, 0, 90deg)
+			}
+			100%
+			{
+				transform: rotate3d(1, 1, 0, 450deg)
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class = "cube">
+		<div class = "face front"> Front </div>
+		<div class = "face left"> Left </div>
+		<div class = "face right"> Right </div>
+		<div class = "face back"> Back </div>
+		<div class = "face top"> Top </div>
+		<div class = "face bottom"> Bottom </div>
+	</div>
+<body>
+</html>
