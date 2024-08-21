@@ -3,7 +3,12 @@
 <head>
 	<title>Huh</title>
 	<style>
-		.cube {
+		body
+		{
+			overflow: hidden;
+		}
+		.cube 
+		{
 			perspective: 20000px;
 			display: flex;
 			justify-content: center;
@@ -12,7 +17,6 @@
 			transform-style: preserve-3d;
 			top: 50%;
 			left: 50%;
-			transform: rotate3d(1, 1, 1.2, 45deg);
 			animation: 10s linear infinite spiiin;
 		}
 		.face
@@ -56,11 +60,56 @@
 		{
 			0%
 			{
-				transform: rotate3d(1, 1, 1.2, 90deg)
+				transform: rotate3d(1, 1, 1.2, 0deg);
 			}
 			100%
 			{
-				transform: rotate3d(1, 1, 1.2, 450deg)
+				transform: rotate3d(1, 1, 1.2, 360deg);
+			}
+		}
+
+		.screw
+		{
+			display: flex;
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			background: gray;
+			justify-content: center;
+			align-items: center;
+			border-radius: 100%;
+			font-size: 30px;
+			animation: 5s linear infinite screwScrew;
+		}
+		.s1
+		{
+			top: 5%;
+			left: 5%;
+		}
+		.s2
+		{
+			top: 5%;
+			right: 5%;
+		}
+		.s3
+		{
+			bottom: 5%;
+			left: 5%;
+		}
+		.s4
+		{
+			bottom: 5%;
+			right: 5%;
+		}
+		@keyframes screwScrew
+		{
+			0%
+			{
+				transform: rotateZ(0deg) scale(1, 1);
+			}
+			100%
+			{
+				transform: rotateZ(1440deg) scale(0.75, 0.75);
 			}
 		}
 	</style>
@@ -74,5 +123,12 @@
 		<div class = "face top"> Top </div>
 		<div class = "face bottom"> Bottom </div>
 	</div>
+	<div class = "screw s1"> / </div>
+	<div class = "screw s2"> / </div>
+	<div class = "screw s3"> / </div>
+	<div class = "screw s4"> / </div>
+	<script>
+		
+	</script>
 <body>
 </html>
